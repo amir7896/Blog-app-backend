@@ -27,6 +27,7 @@ router.post('/register', async(req, res) => {
                     if(err){
                         if(err.code ===11000){
                             res.json({success: false, message: 'Email Already Exists!'})
+                            console.log(err.message)
                         }else{
                             if(err.errors){
                                 if(err.errors.email){
